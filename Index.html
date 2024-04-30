@@ -2,37 +2,70 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Primi passi operativi per creare un modello di pagina HTML per un post. Scopri come iniziare in modo facile." />
     <title>Sviluppo di una pagina web - Blog Epicode</title>
+    <style>
+      body {
+        background-color: blanchedalmond;
+      }
+      main {
+        display: flex;
+        width: 90%;
+      }
+      #titolo-pagina {
+        display: inline;
+      }
+
+      table,
+      th,
+      td {
+        border: 1px solid rgb(6, 0, 0);
+      }
+      nav button {
+        width: 33%;
+        background-color: black;
+        color: white;
+        cursor: pointer;
+      }
+      aside article {
+        border-style: solid;
+        border-width: 3px;
+        border-color: black;
+        padding: 20px 32px;
+        cursor: pointer;
+      }
+    </style>
   </head>
   <body>
     <header>
       <div>
-        <img src="assets/epicode-logo.png" width="50px" alt="logo epicode" />
-        <h3 style="display: inline">Epicode - il blog dei developers</h3>
+        <img src="assets/epicode-logo.png" width="45px" alt="logo epicode" />
+        <h1 id="titolo-pagina">Epicode - il blog dei developers</h1>
+        <!-- <h1>Sviluppo di una pagina web - Blog Epicode</h1>
+        <p>Primi passi operativi per creare un modello di pagina HTML per un post. Scopri come iniziare in modo facile.</p> -->
       </div>
-      <h1>Sviluppo di una pagina web - Blog Epicode</h1>
-      <p>Primi passi operativi per creare un modello di pagina HTML per un post. Scopri come iniziare in modo facile.</p>
+      <hr />
+      <!-- inizio menù -->
       <nav>
-        <ul>
-          <li>Home</li>
-          <li>Articoli</li>
-          <li>Lavora con noi</li>
-        </ul>
+        <button>Home</button>
+        <button>Articoli</button>
+        <button>Lavora con noi</button>
       </nav>
     </header>
 
     <main>
       <section>
         <article>
+          <h2>Come creare un template per i post di Mario Rossi - pubblicato il 25-10-2020</h2>
           <div>
-            <h2>Come creare un template per i post di Mario Rossi - pubblicato il 25-10-2020</h2>
+            <!-- titolo post -->
+            <!-- contenuto del post -->
             <p>La prima cosa da fare è suddividere in blocchi logici la pagina, identificando le parti comuni da applicare a tutte le pagine</p>
             <p>Le varie aree saranno quindi suddivise in:</p>
             <ul>
-              <li>Contenuti di intestazione del tag &lt;header&gt;</li>
-              <li>Contenuti centrali variabili del tag &lt;main&gt; (corpo principale)</li>
-              <li>Contenuti di fine pagina comuni, da inserire nel tag &lt;footer&gt;</li>
+              <li>Contenuti di intestazione del tag <strong>&lt;header&gt;</strong></li>
+              <li>Contenuti centrali variabili del tag <strong> &lt;main&gt;</strong> (corpo principale)</li>
+              <li>Contenuti di fine pagina comuni, da inserire nel tag <strong>&lt;footer&gt;</strong></li>
             </ul>
           </div>
           <div>
@@ -46,7 +79,8 @@
           </div>
           <div>
             <p>L'applicazione di stili CSS è cresciuta negli anni fino a raggiungere la diffusione pressochè totale.</p>
-            <table border="1px">
+            <!-- Tabella a 3 colonne -->
+            <table>
               <caption>
                 Diffusione dei CSS
               </caption>
@@ -98,10 +132,11 @@
           </div>
           <div>
             <p>Vuoi rimanere aggiornato su altre novità dei blog? Iscriviti alla nostra newsletter:</p>
+            <!-- form newsletter -->
             <form>
               <div>
                 <label for="Email-newsletter">Inserisci l'email</label>
-                <input type="email" id="Email-newsletter" />
+                <input type="email" id="Email-newsletter" required placeholder="mario.rossi@gmail.com" />
               </div>
               <div>
                 <label for="button-invio">Iscriviti!</label>
@@ -112,27 +147,33 @@
         </article>
       </section>
       <aside>
-        <h3>Articoli correlati</h3>
+        <!-- area correlati -->
+        <h2>Articoli correlati</h2>
         <article>
-          <h4>Validare il codice HTML</h4>
+          <h3>Validare il codice HTML</h3>
           <p>Categoria: develop</p>
           <p>Data: 18-9-2020</p>
         </article>
+        <br />
+
         <article>
-          <h4>Correggere la sintassi</h4>
+          <h3>Correggere la sintassi</h3>
           <p>Categoria: develop</p>
           <p>Data: 16-9-2020</p>
         </article>
+        <br />
+
         <article>
-          <h4>Meno Kb nella pagina</h4>
+          <h3>Meno Kb nella pagina</h3>
           <p>Categoria: ottimizzazione</p>
           <p>Data: 30-9-2020</p>
         </article>
       </aside>
     </main>
+    <hr />
     <footer>
+      <!-- copyright e info -->
       <p>Blog Epicode &copy;2023</p>
-      <br />
       <p>Testata online di Mario Rossi, registrata con prot, n.213/2018 - via Luigi Einaudi 2 - Milano.P.IVA 00112233.</p>
       <p>info@epicode.school <a href="#">mario.rossi@gmail.com</a></p>
     </footer>
